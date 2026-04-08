@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="tests.DashboardTest">
+        <methods>
+          <include name="TC_Dashboard_240"/>
+          <include name="tearDown"/>
+          <include name="TC_Dashboard_242"/>
+          <include name="TC_Dashboard_250"/>
+          <include name="TC_Dashboard_244"/>
+          <include name="TC_Dashboard_241"/>
+          <include name="TC_Dashboard_243"/>
+          <include name="TC_Dashboard_237"/>
+          <include name="TC_Dashboard_248"/>
+          <include name="TC_Dashboard_245"/>
+          <include name="TC_Dashboard_239"/>
+          <include name="TC_Dashboard_247"/>
+          <include name="TC_Dashboard_236"/>
+          <include name="TC_Dashboard_249"/>
+          <include name="TC_Dashboard_238"/>
+          <include name="setup"/>
+          <include name="TC_Dashboard_235"/>
+          <include name="TC_Dashboard_246"/>
+        </methods>
+      </class> <!-- tests.DashboardTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

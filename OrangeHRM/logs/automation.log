@@ -1,0 +1,12 @@
+2026-04-02 02:35:24 [main] INFO  tests.LoginTest - Starting framework setup for browser: chrome
+2026-04-02 02:35:26 [main] INFO  utilities.ConfigReader - Properties file loaded successfully
+2026-04-02 02:35:26 [main] INFO  tests.LoginTest - Navigating to configured URL
+2026-04-02 02:35:31 [main] INFO  pages.LoginPage - Clicked login button
+2026-04-02 02:35:31 [main] INFO  pages.LoginPage - Entered username
+2026-04-02 02:35:31 [main] INFO  pages.LoginPage - Entered password
+2026-04-02 02:35:32 [main] INFO  pages.LoginPage - Clicked login button
+2026-04-02 02:35:33 [main] INFO  pages.LoginPage - Entered username
+2026-04-02 02:35:34 [main] INFO  pages.LoginPage - Entered password
+2026-04-02 02:35:34 [main] INFO  pages.LoginPage - Clicked login button
+2026-04-02 02:35:40 [main] INFO  pages.LoginPage - Clicked Logout
+2026-04-02 02:35:41 [main] INFO  tests.LoginTest - Browser active session closed

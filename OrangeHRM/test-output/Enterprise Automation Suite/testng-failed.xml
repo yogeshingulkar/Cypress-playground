@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Enterprise Automation Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Chrome Test Execution(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.AdminTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchUserTest" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.AdminTest -->
+    </classes>
+  </test> <!-- Chrome Test Execution(failed) -->
+  <test thread-count="2" parallel="tests" name="Edge Test Execution(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.AdminTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchUserTest" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.AdminTest -->
+    </classes>
+  </test> <!-- Edge Test Execution(failed) -->
+</suite> <!-- Failed suite [Enterprise Automation Suite] -->

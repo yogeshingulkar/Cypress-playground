@@ -1,0 +1,121 @@
+﻿
+Warning: The allowCypressEnv configuration option is enabled. This allows any browser code to read values from Cypress.env(). This is insecure and will be removed in a future major version.
+
+1. Replace Cypress.env() calls with cy.env() (for sensitive values) or Cypress.expose() (for public configuration)
+2. Set allowCypressEnv: false in your Cypress configuration to disable Cypress.env()
+
+Learn more: https://on.cypress.io/cypress-env-migration
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Cypress:        15.13.1                                                                        Γöé
+  Γöé Browser:        Electron 138 (headless)                                                        Γöé
+  Γöé Node Version:   v24.12.0 (C:\Program Files\nodejs\node.exe)                                    Γöé
+  Γöé Specs:          1 found (cura-demo.cy.js)                                                      Γöé
+  Γöé Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+Remove output folder D:\M65\Cypress\cura\cura\cypress\reports\html
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  cura-demo.cy.js                                                                 (1 of 1)
+
+
+  Cura Home Health - Demo Page E2E Suite
+    Page Loading and Core Branding
+      ΓêÜ should successfully load the webpage and have a coherent title (9760ms)
+      1) should display the core brand logo in the viewport header
+    Form Validation and Conversion Points
+      2) should contain a form mechanism to capture prospect data
+      3) should contain recognizable call-to-action (CTA) buttons
+    Structural and Navigational Elements
+      ΓêÜ should load the header navigation safely
+      ΓêÜ should render a footer containing copyright or disclaimers
+
+
+  3 passing (43s)
+  3 failing
+
+  1) Cura Home Health - Demo Page E2E Suite
+       Page Loading and Core Branding
+         should display the core brand logo in the viewport header:
+     AssertionError: Timed out retrying after 4000ms: expected '<div.logo_container>' to be 'visible'
+
+This element `<div.logo_container>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:
+
+`<a href="#">Products</a>`
+      at Context.eval (webpack://cura/./cypress/e2e/cura-demo.cy.js:32:34)
+
+  2) Cura Home Health - Demo Page E2E Suite
+       Form Validation and Conversion Points
+         should contain a form mechanism to capture prospect data:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `form`, but never found it.
+      at Context.eval (webpack://cura/./cypress/e2e/cura-demo.cy.js:46:29)
+      at getRet (https://cura.com/__cypress/runner/cypress_runner.js:122798:20)
+      at tryCatcher (https://cura.com/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (https://cura.com/__cypress/runner/cypress_runner.js:4285:29)
+      at Context.thenFn (https://cura.com/__cypress/runner/cypress_runner.js:122809:66)
+      at Context.then (https://cura.com/__cypress/runner/cypress_runner.js:123060:21)
+      at wrapped (https://cura.com/__cypress/runner/cypress_runner.js:146308:19)
+
+  3) Cura Home Health - Demo Page E2E Suite
+       Form Validation and Conversion Points
+         should contain recognizable call-to-action (CTA) buttons:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `button, input[type="submit"], a.btn, a.elementor-button`, but never found it.
+      at Context.eval (webpack://cura/./cypress/e2e/cura-demo.cy.js:53:72)
+
+
+
+[mochawesome] Report JSON saved to D:\M65\Cypress\cura\cura\cypress\reports\html\.jsons\mochawesome.json
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        6                                                                                Γöé
+  Γöé Passing:      3                                                                                Γöé
+  Γöé Failing:      3                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  3                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     43 seconds                                                                       Γöé
+  Γöé Spec Ran:     cura-demo.cy.js                                                                  Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  D:\M65\Cypress\cura\cura\cypress\screenshots\cura-demo.cy.js\Cura Home Health -      (1280x720)
+     Demo Page E2E Suite -- Page Loading and Core Branding -- should display the core               
+      brand logo in the viewport header (failed).png                                                
+  -  D:\M65\Cypress\cura\cura\cypress\screenshots\cura-demo.cy.js\Cura Home Health -      (1280x720)
+     Demo Page E2E Suite -- Form Validation and Conversion Points -- should contain a               
+      form mechanism to capture prospect data (failed).png                                          
+  -  D:\M65\Cypress\cura\cura\cypress\screenshots\cura-demo.cy.js\Cura Home Health -      (1280x720)
+     Demo Page E2E Suite -- Form Validation and Conversion Points -- should contain r               
+     ecognizable call-to-action (CTA) buttons (failed).png                                          
+
+Start generate report process
+Read and merge jsons from "D:\M65\Cypress\cura\cura\cypress\reports\html\.jsons"
+Enhance report
+Create HTML report
+HTML report successfully created!
+D:\M65\Cypress\cura\cura\cypress\reports\html\index.html
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé ├ù  cura-demo.cy.js                          00:43        6        3        3        -        - Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+    ├ù  1 of 1 failed (100%)                     00:43        6        3        3        -        -  
+
