@@ -43,37 +43,47 @@ describe('Demo Web Shop', () => {
     cy.get('#small-searchterms').clear().type('book')
     // find the search button and clicked.
     cy.get('input[value="Search"]').click()
-  
+
+    //verify that book products are visible with the url or content or page title as welllllll
     cy.get('.product-item').should('exist')
   });
 
+  
   it('Search validation (empty input)', () => {
+  //search field cleared...
     cy.get('#small-searchterms').clear()
-
+  
+    // handled alert popup 
     cy.on('window:alert', (text) => {
       expect(text).to.contains('Please enter some search keyword')
     });
 
+    // alert start
     cy.get('input[value="Search"]').click()
   });
 
   it('Login test', () => {
+    //click on login 
     cy.contains('Log in').click()
 
+    // credentials entered 
     cy.get('#Email').type('test@test.com')
     cy.get('#Password').type('123456')
 
+    // click on login button (submit)
     cy.get('input[value="Log in"]').click()
 
+    // here we check that is the reload happens perfectly - verified using body ele in HTML DOM 
     cy.get('body').should('be.visible')
   });
 
+  // verify with url that we're in right page or not  
   it('Verify category navigation', () => {
     cy.contains('Books').click()
-
     cy.url().should('contain', '/books')
   });
 
+  //
   it('Add product to cart', () => {
     cy.contains('Books').click()
 
