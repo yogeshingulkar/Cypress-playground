@@ -83,57 +83,53 @@ describe('Demo Web Shop', () => {
     cy.url().should('contain', '/books')
   });
 
-  //
   it('Add product to cart', () => {
     cy.contains('Books').click()
-
     cy.get('.product-item').first().click()
-
     cy.get('input[value="Add to cart"]').click()
 
+    //to verify that product is successfully added into the cart with message
     cy.get('.bar-notification').should('be.visible')
   });
 
+  // 
   it('Verify cart hover popup', () => {
+    // mouse hovering cmd
     cy.get('#topcartlink').trigger('mouseenter')
-
+    // verified that popup is appeared or not
     cy.get('#flyout-cart').should('be.visible')
   });
 
   it('Newsletter subscription', () => {
-    cy.get('#newsletter-email').type('test@test.com')
-
+    cy.get('#newsletter-email').type('yogeshingulkar750@gmail.com')
     cy.get('#newsletter-subscribe-button').click()
-
+    // verify that subscribed or not
     cy.get('#newsletter-result-block').should('be.visible')
   });
 
+  //first check the options and then click performed by me 
   it('Vote in poll', () => {
     cy.get('#pollanswers-1').check()
-
     cy.get('#vote-poll-1').click()
   });
 
+  //
   it('Register new user', () => {
     cy.contains('Register').click()
-    
     cy.get('#gender-male').check()
-
     cy.get('#FirstName').type('Yogesh')
     cy.get('#LastName').type('Ingulkar')
-
+    
+    // optimised logic
     cy.get('#Email').type(`yogesh${Date.now()}@mail.com`)
-
     cy.get('#Password').type('123456')
     cy.get('#ConfirmPassword').type('123456')
-
     cy.get('#register-button').click()
-
+    
+    // verify that expected result matching with actual result i got...
     cy.get('body').should('contain', 'Your registration completed')
   });
 
 });
-
-// Note : in this script i used basic commands, navigation, cookies, local storage, alerts, form filling, checkboxes, radio buttons, dropdowns, mouse hover, drag and drop, file upload, API testing, performance testing. 
-
 //before write any test case it must be verify at the end <- important Note
+// Note : in this script i used basic commands, navigation, cookies, local storage, alerts, form filling, checkboxes, radio buttons, dropdowns, mouse hover, drag and drop, file upload, API testing, performance testing. 
