@@ -21,7 +21,7 @@ describe('Demo Web Shop', () => {
     //1. with URL
      cy.url().should('eq', 'https://example.com');
     
-    // 2. element re-rendered or not 
+    // 2. element reloaded or not 
     cy.get('h1').should('be.visible');
     
     //3. input cleared or not after reload happened..
@@ -37,11 +37,13 @@ describe('Demo Web Shop', () => {
     });
   });
 
-  //
+  
   it('Search product functionality', () => {
+    //searchbox found and then clear if their any content present and then type book.
     cy.get('#small-searchterms').clear().type('book')
+    // find the search button and clicked.
     cy.get('input[value="Search"]').click()
-
+  
     cy.get('.product-item').should('exist')
   });
 
@@ -124,3 +126,4 @@ describe('Demo Web Shop', () => {
 
 // Note : in this script i used basic commands, navigation, cookies, local storage, alerts, form filling, checkboxes, radio buttons, dropdowns, mouse hover, drag and drop, file upload, API testing, performance testing. 
 
+//before write any test case it must be verify at the end <- important Note
