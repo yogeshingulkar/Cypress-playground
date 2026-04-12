@@ -1,24 +1,43 @@
-<reference types="cypress" />
+<reference types="cypress" /> //this cmd tells code editor to use cypress types and suggestions.
 
+  //describe will group all related test cases
 describe('Demo Web Shop', () => {
+  //it runs before each & every test cases 
   beforeEach(() => {
     cy.visit('https://demowebshop.tricentis.com/')
   });
 
   it('Verify homepage loads properly', () => {
+
+    //find logo from HTML DOM & Verifies it's visibility.
     cy.get('.header-logo').should('be.visible')
 
+    //common browser navigation's
     cy.go('back')
     cy.go('forward')
-    cy.reload()
+    cy.reload() //que : how i can verify that reload is happened or not. (asked pseudo code)
+    // i can verify it with the URL and Page title.. below i mentioned the steps to verify it with cypress.
+    //there are total 3 ways i found.
+    //1. with URL
+     cy.url().should('eq', 'https://example.com');
+    
+    // 2. element re-rendered or not 
+    cy.get('h1').should('be.visible');
+    
+    //3. input cleared or not after reload happened..
+    cy.get('input').should('have.value', '');
 
+    // Checks cookies exist or not / verifies that session working properly...
     cy.getCookies().should('exist')
 
+    // access the browser window
     cy.window().then((win) => {
+      //verify that local storage exist or not
       expect(win.localStorage).to.exist
     });
   });
 
+  //
   it('Search product functionality', () => {
     cy.get('#small-searchterms').clear().type('book')
     cy.get('input[value="Search"]').click()
