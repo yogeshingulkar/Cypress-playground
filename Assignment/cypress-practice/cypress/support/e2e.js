@@ -16,6 +16,6 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
-import './loginCommands'
-import './cartCommands'
-import './apiCommands'
+import './dws_login'
+import './dws_cart'
+import './dws_api'

@@ -13,6 +13,7 @@ Cypress.Commands.add('logout', () => {
 
 Cypress.Commands.add('register', (firstName, lastName, email, password) => {
   cy.contains('Register').click()
+    cy.get('#gender-male').check()
     cy.get('#FirstName').type(firstName)
     cy.get('#LastName').type(lastName)
     cy.get('#Email').type(email)

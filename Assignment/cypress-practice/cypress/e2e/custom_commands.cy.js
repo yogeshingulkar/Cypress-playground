@@ -5,7 +5,11 @@ describe('Framework Demo', () => {
   })
 
   it('Login Test', () => {
-    cy.login('test@test.com', '123456')
+    let email = `user${Date.now()}@test.com`;
+    cy.register('Test', 'User', email, '123456');
+    cy.verifyText('Your registration completed');
+    cy.logout();
+    cy.login(email, '123456')
     cy.verifyText('Log out')
   })
 

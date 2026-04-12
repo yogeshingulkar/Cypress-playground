@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Demo Web Shop Verify homepage loads properly",
+    "error": "AssertionError: Timed out retrying after 4000ms: expected 'about:blank' to equal 'https://example.com'\n    at Context.eval (webpack://cypress-practice/./cypress/e2e/cypress_commands.cy.js:23:14)"
+  },
+  {
+    "title": "Demo Web Shop Add product to cart",
+    "error": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 3 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://demowebshop.tricentis.com/__cypress/runner/cypress_runner.js:114741:68)\n    at Context.click (https://demowebshop.tricentis.com/__cypress/runner/cypress_runner.js:114908:14)\n    at wrapped (https://demowebshop.tricentis.com/__cypress/runner/cypress_runner.js:146308:19)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-practice/./cypress/e2e/cypress_commands.cy.js:90:41)"
+  }
+]

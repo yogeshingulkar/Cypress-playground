@@ -4,12 +4,12 @@ Cypress.Commands.add('searchProduct', (product) => {
 })
 
 Cypress.Commands.add('addFirstProductToCart', () => {
-  cy.get('.product-item').first().click()
-  cy.get('input[value="Add to cart"]').click()
+  cy.get('.product-item').first().find('input[value="Add to cart"]').click()
 })
 
 Cypress.Commands.add('openCartHover', () => {
   cy.get('#topcartlink').trigger('mouseenter')
+  cy.get('#flyout-cart').invoke('show')
 })
 
 Cypress.Commands.add('proceedToCheckout', () => {

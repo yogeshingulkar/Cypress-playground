@@ -1,5 +1,5 @@
 //this cmd tells code editor to use cypress types and suggestions.
-<reference types="cypress" /> 
+/// <reference types="cypress" /> 
 
   //describe will group all related test cases
 describe('Demo Web Shop', () => {
@@ -20,7 +20,7 @@ describe('Demo Web Shop', () => {
     // i can verify it with the URL and Page title.. below i mentioned the steps to verify it with cypress.
     //there are total 3 ways i found.
     //1. with URL
-     cy.url().should('eq', 'https://example.com');
+     cy.url().should('eq', 'https://demowebshop.tricentis.com/');
     
     // 2. element reloaded or not 
     cy.get('h1').should('be.visible');
@@ -86,8 +86,7 @@ describe('Demo Web Shop', () => {
 
   it('Add product to cart', () => {
     cy.contains('Books').click()
-    cy.get('.product-item').first().click()
-    cy.get('input[value="Add to cart"]').click()
+    cy.get('.product-item').first().find('input[value="Add to cart"]').click()
 
     //to verify that product is successfully added into the cart with message
     cy.get('.bar-notification').should('be.visible')
@@ -98,7 +97,7 @@ describe('Demo Web Shop', () => {
     // mouse hovering cmd
     cy.get('#topcartlink').trigger('mouseenter')
     // verified that popup is appeared or not
-    cy.get('#flyout-cart').should('be.visible')
+    cy.get('#flyout-cart').invoke('show').should('be.visible')
   });
 
   it('Newsletter subscription', () => {
