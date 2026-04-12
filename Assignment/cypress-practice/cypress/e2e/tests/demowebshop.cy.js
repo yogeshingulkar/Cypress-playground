@@ -1,4 +1,5 @@
-<reference types="cypress" /> //this cmd tells code editor to use cypress types and suggestions.
+//this cmd tells code editor to use cypress types and suggestions.
+<reference types="cypress" /> 
 
   //describe will group all related test cases
 describe('Demo Web Shop', () => {
