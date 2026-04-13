@@ -9,4 +9,4 @@ Cypress.Commands.add('postRequest', (url, body) => {
 Cypress.Commands.add('mockApi', (method, url) => {
   cy.intercept(method, url).as('apiCall')
 })
-
+//listens @apiCall

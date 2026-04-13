@@ -51,6 +51,8 @@ Cypress.Commands.add('addToCart', (productName) => {
   cy.contains(productName).click()
   cy.get('#add-to-cart-button-1').click()
 })
+//we can also create or use : cy.contains('.product-item', productName).click()
+//without visiting the product page. 
 
 Cypress.Commands.add('checkout', () => {
   cy.clickByText('Shopping cart')
@@ -70,3 +72,4 @@ Cypress.Commands.add('fillBillingAddress', (address) => {
   cy.get('input[name="save"]').click()
 })
 
+//fails occasionally when already have value in the textfield...
