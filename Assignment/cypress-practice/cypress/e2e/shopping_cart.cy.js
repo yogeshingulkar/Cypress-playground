@@ -48,7 +48,7 @@ describe('DemoWebShop - Wishlist & Cart Flow', () => {
     );
   });
 
-  it('Step 1 - Add $5 Virtual Gift Card to Wishlist', () => {
+  it('Add $5 Virtual Gift Card to Wishlist', () => {
     cy.visit('/5-virtual-gift-card');
     cy.get('#giftcard_1_RecipientName').clear().type('Test Recipient');
     cy.get('#giftcard_1_RecipientEmail').clear().type('recipient@mail.com');
@@ -59,7 +59,7 @@ describe('DemoWebShop - Wishlist & Cart Flow', () => {
     dismissNotification();
   });
 
-  it('Step 2 - Add $25 Virtual Gift Card to Wishlist', () => {
+  it('Add $25 Virtual Gift Card to Wishlist', () => {
     cy.visit('/25-virtual-gift-card');
     cy.get('#giftcard_2_RecipientName').clear().type('Second Recipient');
     cy.get('#giftcard_2_RecipientEmail').clear().type('second@mail.com');
@@ -70,7 +70,7 @@ describe('DemoWebShop - Wishlist & Cart Flow', () => {
     dismissNotification();
   });
 
-  it('Step 3 - Verify Wishlist contains products', () => {
+  it('Verify Wishlist contains products', () => {
     cy.visit('/wishlist');
     cy.get('form[action="/wishlist"]').within(() => {
       cy.get('table.cart').should('be.visible');
@@ -81,7 +81,7 @@ describe('DemoWebShop - Wishlist & Cart Flow', () => {
     });
   });
 
-  it('Step 4 - Move ALL Wishlist items to Shopping Cart', () => {
+  it('Move ALL Wishlist items to Shopping Cart', () => {
     cy.visit('/wishlist');
     cy.get('table.cart', { timeout: 8000 }).should('be.visible');
     cy.get('input[name="addtocart"]').check({ multiple: true });
@@ -91,7 +91,7 @@ describe('DemoWebShop - Wishlist & Cart Flow', () => {
     cy.get('tbody tr').should('have.length.gte', 1);
   });
 
-  it('Step 5 - Remove ALL items from Shopping Cart', () => {
+  it('Remove ALL items from Shopping Cart', () => {
     cy.visit('/cart');
     cy.get('table.cart', { timeout: 8000 }).should('be.visible');
     cy.get('input[name="removefromcart"]').check({ multiple: true });
@@ -100,7 +100,7 @@ describe('DemoWebShop - Wishlist & Cart Flow', () => {
       .should('contain', 'Your Shopping Cart is empty!');
   });
 
-  it('Step 6 - Remove ALL items from Wishlist', () => {
+  it('Remove ALL items from Wishlist', () => {
     cy.visit('/wishlist');
     cy.get('body').then(($body) => {
       if ($body.find('input[name="removefromcart"]').length > 0) {
@@ -114,7 +114,7 @@ describe('DemoWebShop - Wishlist & Cart Flow', () => {
     });
   });
 
-  it('Full Flow - Add to Wishlist -> Add to Cart -> Remove from Cart -> Remove from Wishlist', () => {
+  it('Full Flow of Add to Wishlist -> Add to Cart -> Remove from Cart -> Remove from Wishlist', () => {
     cy.visit('/5-virtual-gift-card');
     cy.get('#giftcard_1_RecipientName').clear().type('Test Recipient');
     cy.get('#giftcard_1_RecipientEmail').clear().type('recipient@mail.com');
